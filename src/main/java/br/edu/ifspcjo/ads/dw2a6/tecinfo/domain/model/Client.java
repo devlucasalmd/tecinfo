@@ -15,6 +15,8 @@ import org.hibernate.validator.constraints.br.CPF;
 @Table(name = "client")
 public class Client {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
     
 	@NotNull
@@ -40,8 +42,7 @@ public class Client {
     
 	private Boolean active;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	public Long getId() {
 		return id;
 	}
